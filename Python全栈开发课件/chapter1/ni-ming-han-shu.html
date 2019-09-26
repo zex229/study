@@ -1,0 +1,1883 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>匿名函数 | Python 全栈开发技能大全</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter1/fei-bo-na-qi.html" />
+    
+    
+    <link rel="prev" href="../chapter1/python4e2d-args-548c-kargs-de-yong-fa-zong-jie.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.49"
+        data-chapter-title="匿名函数"
+        data-filepath="chapter1/ni-ming-han-shu.md"
+        data-basepath=".."
+        data-revision="Sat Aug 24 2019 10:24:58 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        知识点
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/vibian-ji-qi-de-shi-yong.html">
+            
+                
+                    <a href="../chapter1/vibian-ji-qi-de-shi-yong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        vi编辑器的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/zhu-shi.html">
+            
+                
+                    <a href="../chapter1/zhu-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        注释
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/pythonjie-shi-qi.html">
+            
+                
+                    <a href="../chapter1/pythonjie-shi-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python解释器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/qiu-san-jiao-xing-mian-ji.html">
+            
+                
+                    <a href="../chapter1/qiu-san-jiao-xing-mian-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        计算问题总结大全
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter1/ge-shi-hua-shu-chu.html">
+            
+                
+                    <a href="../chapter1/ge-shi-hua-shu-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        格式化输出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter1/pan-duan-xun-huan.html">
+            
+                
+                    <a href="../chapter1/pan-duan-xun-huan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        判断 循环
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter1/bai-qian-mai-bai-ji.html">
+            
+                
+                    <a href="../chapter1/bai-qian-mai-bai-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        百钱买百鸡
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter1/jiu-jiu-cheng-fa-biao.html">
+            
+                
+                    <a href="../chapter1/jiu-jiu-cheng-fa-biao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        九九乘法表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter1/yong-hu-deng-lu.html">
+            
+                
+                    <a href="../chapter1/yong-hu-deng-lu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        用户登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter1/shui-xian-hua.html">
+            
+                
+                    <a href="../chapter1/shui-xian-hua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        水仙花
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter1/breakhe-continue.html">
+            
+                
+                    <a href="../chapter1/breakhe-continue.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        break和continue
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter1/zi-fu-chuan.html">
+            
+                
+                    <a href="../chapter1/zi-fu-chuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter1/lie-biao.html">
+            
+                
+                    <a href="../chapter1/lie-biao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter1/zi-dian.html">
+            
+                
+                    <a href="../chapter1/zi-dian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        字典
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter1/yuan-zu.html">
+            
+                
+                    <a href="../chapter1/yuan-zu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        元祖
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="chapter1/ji-he.html">
+            
+                
+                    <a href="../chapter1/ji-he.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        集合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="chapter1/qiu-su-shu.html">
+            
+                
+                    <a href="../chapter1/qiu-su-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        求素数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="chapter1/dian-can-xi-tong.html">
+            
+                
+                    <a href="../chapter1/dian-can-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        点餐系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="chapter1/han-shu.html">
+            
+                
+                    <a href="../chapter1/han-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        函数2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="chapter1/die-dai-qi-he-sheng-cheng-qi.html">
+            
+                
+                    <a href="../chapter1/die-dai-qi-he-sheng-cheng-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        迭代器和生成器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="chapter1/sheng-cheng-qi-han-shu-3001-zhuang-shi-qi-han-shu-yu-bi-bao-han-shu.html">
+            
+                
+                    <a href="../chapter1/sheng-cheng-qi-han-shu-3001-zhuang-shi-qi-han-shu-yu-bi-bao-han-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                        生成器函数、装饰器函数与闭包函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="chapter1/map-filter-reduce.html">
+            
+                
+                    <a href="../chapter1/map-filter-reduce.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                        高阶函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="chapter1/mian-xiang-dui-xiang-bian-cheng.html">
+            
+                
+                    <a href="../chapter1/mian-xiang-dui-xiang-bian-cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                        面向对象编程01
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="chapter1/mian-xiang-dui-xiang-bian-cheng-02.html">
+            
+                
+                    <a href="../chapter1/mian-xiang-dui-xiang-bian-cheng-02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                        面向对象编程02
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="chapter1/xin-shi-lei-he-jiu-shi-lei.html">
+            
+                
+                    <a href="../chapter1/xin-shi-lei-he-jiu-shi-lei.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                        新式类和旧式类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="chapter1/if-da-de-fei.html">
+            
+                
+                    <a href="../chapter1/if-da-de-fei.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                        if \_\_name\_\_ == &#39;\_\_main\_\_&#39;
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="chapter1/sorthe-sorted-reversed-hereverse.html">
+            
+                
+                    <a href="../chapter1/sorthe-sorted-reversed-hereverse.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                        sort和sorted reversed和reverse
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="chapter1/lie-biao-ff0c-zi-dian-ff0c-yuan-zu-ff0c-zi-fu-chuan-xiao-jie.html">
+            
+                
+                    <a href="../chapter1/lie-biao-ff0c-zi-dian-ff0c-yuan-zu-ff0c-zi-fu-chuan-xiao-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                        列表，字典，元祖，字符串，集合总结
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.28.1" data-path="chapter1/lie-biao-ff0c-zi-dian-ff0c-yuan-zu-ff0c-zi-fu-chuan-xiao-jie/lie-biao.html">
+            
+                
+                    <a href="../chapter1/lie-biao-ff0c-zi-dian-ff0c-yuan-zu-ff0c-zi-fu-chuan-xiao-jie/lie-biao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.1.</b>
+                        
+                        列表
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="chapter1/liang-ge-bian-liang-jiao-huan-zhi.html">
+            
+                
+                    <a href="../chapter1/liang-ge-bian-liang-jiao-huan-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.29.</b>
+                        
+                        两个变量交换值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="chapter1/nei-zhi-han-shu-jie-shao.html">
+            
+                
+                    <a href="../chapter1/nei-zhi-han-shu-jie-shao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.30.</b>
+                        
+                        内置函数介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="chapter1/pythonyi-chang-chu-li.html">
+            
+                
+                    <a href="../chapter1/pythonyi-chang-chu-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.31.</b>
+                        
+                        Python异常处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="chapter1/python-shi-li-fang-fa-3001-lei-fang-fa-3001-jing-tai-fang-fa-de-qu-bie-yu-zuo-yong.html">
+            
+                
+                    <a href="../chapter1/python-shi-li-fang-fa-3001-lei-fang-fa-3001-jing-tai-fang-fa-de-qu-bie-yu-zuo-yong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.32.</b>
+                        
+                        Python 实例方法、类方法、静态方法的区别与作用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="chapter1/ke-bian-lei-xing-he-bu-ke-bian-lei-xing.html">
+            
+                
+                    <a href="../chapter1/ke-bian-lei-xing-he-bu-ke-bian-lei-xing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.33.</b>
+                        
+                        可变类性和不可变类性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="chapter1/qie-pian.html">
+            
+                
+                    <a href="../chapter1/qie-pian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.34.</b>
+                        
+                        切片
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="chapter1/su-shu.html">
+            
+                
+                    <a href="../chapter1/su-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.35.</b>
+                        
+                        素数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="chapter1/can-ting.html">
+            
+                
+                    <a href="../chapter1/can-ting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.36.</b>
+                        
+                        餐厅
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="chapter1/zi-dian-shuang-se-qiu-he-ji-he-shuang-se-qiu.html">
+            
+                
+                    <a href="../chapter1/zi-dian-shuang-se-qiu-he-ji-he-shuang-se-qiu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.37.</b>
+                        
+                        列表嵌套字典双色球和集合双色球
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="chapter1/xiao-qiu-zeng-jia.html">
+            
+                
+                    <a href="../chapter1/xiao-qiu-zeng-jia.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.38.</b>
+                        
+                        小球
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="chapter1/ming-pian-guan-li-xi-tong.html">
+            
+                
+                    <a href="../chapter1/ming-pian-guan-li-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.39.</b>
+                        
+                        名片管理系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="chapter1/enumerate-han-shu.html">
+            
+                
+                    <a href="../chapter1/enumerate-han-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.40.</b>
+                        
+                        enumerate\(\) 函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="chapter1/cmp-han-shu.html">
+            
+                
+                    <a href="../chapter1/cmp-han-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.41.</b>
+                        
+                        cmp\(\) 函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="chapter1/dong-tai-qiu-ge-ge-zi-fu-de-ge-shu.html">
+            
+                
+                    <a href="../chapter1/dong-tai-qiu-ge-ge-zi-fu-de-ge-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.42.</b>
+                        
+                        动态求各个字符的个数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="chapter1/mao-pao-pai-xu.html">
+            
+                
+                    <a href="../chapter1/mao-pao-pai-xu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.43.</b>
+                        
+                        常用算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="chapter1/qiu-zhi-shu.html">
+            
+                
+                    <a href="../chapter1/qiu-zhi-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.44.</b>
+                        
+                        求质数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="chapter1/zuo-ye.html">
+            
+                
+                    <a href="../chapter1/zuo-ye.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.45.</b>
+                        
+                        作业
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="chapter1/yue-kao-ti.html">
+            
+                
+                    <a href="../chapter1/yue-kao-ti.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.46.</b>
+                        
+                        月考题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="chapter1/han-shu-1.html">
+            
+                
+                    <a href="../chapter1/han-shu-1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.47.</b>
+                        
+                        函数1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="chapter1/python4e2d-args-548c-kargs-de-yong-fa-zong-jie.html">
+            
+                
+                    <a href="../chapter1/python4e2d-args-548c-kargs-de-yong-fa-zong-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.48.</b>
+                        
+                        python中\*args和\*\*kargs得用法总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.49" data-path="chapter1/ni-ming-han-shu.html">
+            
+                
+                    <a href="../chapter1/ni-ming-han-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.49.</b>
+                        
+                        匿名函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="chapter1/fei-bo-na-qi.html">
+            
+                
+                    <a href="../chapter1/fei-bo-na-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.50.</b>
+                        
+                        斐波那契
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="chapter1/python-yield-shi-yong-qian-xi.html">
+            
+                
+                    <a href="../chapter1/python-yield-shi-yong-qian-xi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.51.</b>
+                        
+                        Python yield 使用浅析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="chapter1/lei-fang-6cd52c-shi-li-fang-6cd52c-jing-tai-fang-fa.html">
+            
+                
+                    <a href="../chapter1/lei-fang-6cd52c-shi-li-fang-6cd52c-jing-tai-fang-fa.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.52.</b>
+                        
+                        类方法,实例方法,静态方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="chapter1/pythonzhongguan-jianzi-global-yu-nonlocal-de-qu-bie.html">
+            
+                
+                    <a href="../chapter1/pythonzhongguan-jianzi-global-yu-nonlocal-de-qu-bie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.53.</b>
+                        
+                        Python中关键字global与nonlocal的区别
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="chapter1/property.html">
+            
+                
+                    <a href="../chapter1/property.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.54.</b>
+                        
+                        @property
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="chapter1/mo-fang-fang-fa.html">
+            
+                
+                    <a href="../chapter1/mo-fang-fang-fa.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.55.</b>
+                        
+                        魔方方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="chapter1/gao-ji-jin-jia.html">
+            
+                
+                    <a href="../chapter1/gao-ji-jin-jia.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.56.</b>
+                        
+                        高级进价
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="chapter1/san-yuan-yun-suan.html">
+            
+                
+                    <a href="../chapter1/san-yuan-yun-suan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.57.</b>
+                        
+                        三元运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="chapter1/duan-yan.html">
+            
+                
+                    <a href="../chapter1/duan-yan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.58.</b>
+                        
+                        断言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="chapter1/kao-di-gua.html">
+            
+                
+                    <a href="../chapter1/kao-di-gua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.59.</b>
+                        
+                        烤地瓜
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="chapter1/dan-li-ji-suan-ji.html">
+            
+                
+                    <a href="../chapter1/dan-li-ji-suan-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.60.</b>
+                        
+                        单例计算机
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="chapter1/dan-li-mo-shi.html">
+            
+                
+                    <a href="../chapter1/dan-li-mo-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.61.</b>
+                        
+                        单例模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="chapter1/yi-chang-chu-li.html">
+            
+                
+                    <a href="../chapter1/yi-chang-chu-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.62.</b>
+                        
+                        异常处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="chapter1/wen-jian-cao-zuo-wei-shi-yao-yao-guan-bi-wen-jian.html">
+            
+                
+                    <a href="../chapter1/wen-jian-cao-zuo-wei-shi-yao-yao-guan-bi-wen-jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.63.</b>
+                        
+                        文件操作为什么要关闭文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="chapter1/duo-tai.html">
+            
+                
+                    <a href="../chapter1/duo-tai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.64.</b>
+                        
+                        多态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="chapter1/collections.html">
+            
+                
+                    <a href="../chapter1/collections.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.</b>
+                        
+                        Python 模块collections
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.65.1" data-path="chapter1/collections/chainmap.html">
+            
+                
+                    <a href="../chapter1/collections/chainmap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.1.</b>
+                        
+                        ChainMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65.2" data-path="chapter1/collections/deque.html">
+            
+                
+                    <a href="../chapter1/collections/deque.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.2.</b>
+                        
+                        deque
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65.3" data-path="chapter1/collections/namedtuple.html">
+            
+                
+                    <a href="../chapter1/collections/namedtuple.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.3.</b>
+                        
+                        namedtuple
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65.4" data-path="chapter1/collections/defaultdict.html">
+            
+                
+                    <a href="../chapter1/collections/defaultdict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.4.</b>
+                        
+                        defaultdict
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65.5" data-path="chapter1/collections/counter.html">
+            
+                
+                    <a href="../chapter1/collections/counter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.5.</b>
+                        
+                        Counter
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65.6" data-path="chapter1/collections/ordereddict.html">
+            
+                
+                    <a href="../chapter1/collections/ordereddict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.65.6.</b>
+                        
+                        OrderedDict
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="chapter1/python-zhuan-yi-zi-fu.html">
+            
+                
+                    <a href="../chapter1/python-zhuan-yi-zi-fu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.66.</b>
+                        
+                        python 转义字符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="chapter1/yin-shu.html">
+            
+                
+                    <a href="../chapter1/yin-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.67.</b>
+                        
+                        因数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="chapter1/python-os-sysmo-kuai.html">
+            
+                
+                    <a href="../chapter1/python-os-sysmo-kuai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.68.</b>
+                        
+                        python os sys模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.68.1" data-path="chapter1/python-os-sysmo-kuai/os.html">
+            
+                
+                    <a href="../chapter1/python-os-sysmo-kuai/os.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.68.1.</b>
+                        
+                        os
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68.2" data-path="chapter1/python-os-sysmo-kuai/sys.html">
+            
+                
+                    <a href="../chapter1/python-os-sysmo-kuai/sys.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.68.2.</b>
+                        
+                        sys
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="chapter1/python-mo-kuai.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.</b>
+                        
+                        python 模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.69.1" data-path="chapter1/python-mo-kuai/mathmo-kuai.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/mathmo-kuai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.1.</b>
+                        
+                        math
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.2" data-path="chapter1/python-mo-kuai/string.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.2.</b>
+                        
+                        string
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.3" data-path="chapter1/python-mo-kuai/time.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/time.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.3.</b>
+                        
+                        random
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.4" data-path="chapter1/python-mo-kuai/timemo-kuai.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/timemo-kuai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.4.</b>
+                        
+                        time模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.5" data-path="chapter1/python-mo-kuai/json.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.5.</b>
+                        
+                        json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.6" data-path="chapter1/python-mo-kuai/re.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/re.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.6.</b>
+                        
+                        re
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69.7" data-path="chapter1/python-mo-kuai/functools.html">
+            
+                
+                    <a href="../chapter1/python-mo-kuai/functools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.69.7.</b>
+                        
+                        functools
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="chapter1/feng-zhuang-ff0c-ji-cheng-ff0c-duo-tai.html">
+            
+                
+                    <a href="../chapter1/feng-zhuang-ff0c-ji-cheng-ff0c-duo-tai.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.70.</b>
+                        
+                        封装，继承，多态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="chapter1/zhan-he-dui-lie.html">
+            
+                
+                    <a href="../chapter1/zhan-he-dui-lie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.71.</b>
+                        
+                        栈和队列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="chapter1/python-shi-xian-er-cha-shu-qian-xu-ff0c-zhong-xu-ff0c-hou-xu-ff0c-ceng-ci-bian-li.html">
+            
+                
+                    <a href="../chapter1/python-shi-xian-er-cha-shu-qian-xu-ff0c-zhong-xu-ff0c-hou-xu-ff0c-ceng-ci-bian-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.72.</b>
+                        
+                        Python 实现二叉树前序，中序，后序，层次遍历
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="chapter1/multiprocessing.html">
+            
+                
+                    <a href="../chapter1/multiprocessing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.73.</b>
+                        
+                        multiprocessing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="chapter1/new-he-init-de-qu-bie.html">
+            
+                
+                    <a href="../chapter1/new-he-init-de-qu-bie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.74.</b>
+                        
+                        \_\_new\_\_和\_\_init\_\_的区别
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="chapter1/pythonzhong-de-zuo-yong-yu.html">
+            
+                
+                    <a href="../chapter1/pythonzhong-de-zuo-yong-yu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.75.</b>
+                        
+                        Python中的作用域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="chapter1/pythonli-de-kao-bei.html">
+            
+                
+                    <a href="../chapter1/pythonli-de-kao-bei.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.76.</b>
+                        
+                        Python里的拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="chapter1/mian-shi-ti.html">
+            
+                
+                    <a href="../chapter1/mian-shi-ti.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.77.</b>
+                        
+                        面试题
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python 全栈开发技能大全</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x533F;&#x540D;&#x51FD;&#x6570;">&#x533F;&#x540D;&#x51FD;&#x6570;</h1>
+<blockquote>
+<h6 id="&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;lambda--&#x5F62;&#x53C2;-&#x8FD4;&#x56DE;&#x503C;">&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;lambda  &#x5F62;&#x53C2;: &#x8FD4;&#x56DE;&#x503C;</h6>
+</blockquote>
+<pre><code># &#x666E;&#x901A;python&#x51FD;&#x6570;
+def func(a,b,c):
+    return a+b+c
+
+print func(1,2,3)
+# &#x8FD4;&#x56DE;&#x503C;&#x4E3A;6
+
+# lambda&#x533F;&#x540D;&#x51FD;&#x6570;
+f = lambda a,b,c:a+b+c
+
+print f(1,2,3)
+# &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;6
+</code></pre><blockquote>
+<h6 id="f--lambda-abcabc-&#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;lambda&#x8868;&#x793A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;">f = lambda a,b,c:a+b+c &#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;lambda&#x8868;&#x793A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;</h6>
+<h6 id="&#x5192;&#x53F7;&#x4E4B;&#x524D;&#x7684;abc&#x8868;&#x793A;&#x5B83;&#x4EEC;&#x662F;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;"># &#x5192;&#x53F7;:&#x4E4B;&#x524D;&#x7684;a,b,c&#x8868;&#x793A;&#x5B83;&#x4EEC;&#x662F;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;</h6>
+<h6 id="&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x9700;&#x8981;return&#x6765;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8EAB;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#x3002;"># &#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x9700;&#x8981;<a href="http://www.iplaypy.com/jinjie/return.html" target="_blank">return</a>&#x6765;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8EAB;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#x3002;</h6>
+</blockquote>
+<h3 id="&#x65E0;&#x53C2;&#x533F;&#x540D;&#x51FD;&#x6570;">&#x65E0;&#x53C2;&#x533F;&#x540D;&#x51FD;&#x6570;</h3>
+<pre><code>t = lambda : True #&#x5206;&#x53F7;&#x524D;&#x65E0;&#x4EFB;&#x4F55;&#x53C2;&#x6570;
+t()
+True
+
+&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;&#x7684;def&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;
+&gt;&gt;&gt; def func(): return True
+&gt;&gt;&gt; func()
+True
+
+&gt;&gt;&gt; s = &quot;this is\na\ttest&quot; #&#x5EFA;&#x6B64;&#x5B57;&#x7B26;&#x4E32;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x60C5;&#x5F62;&#x8F93;&#x51FA;
+&gt;&gt;&gt; s
+&apos;this is\na\ttest&apos;
+&gt;&gt;&gt; print s.split() #split&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x5206;&#x5272;:&#x7A7A;&#x683C;&#xFF0C;&#x6362;&#x884C;&#x7B26;&#xFF0C;TAB
+[&apos;this&apos;, &apos;is&apos;, &apos;a&apos;, &apos;test&apos;]
+&gt;&gt;&gt; &apos; &apos;.join(s.split()) #&#x7528;join&#x51FD;&#x6570;&#x8F6C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;
+&apos;this is a test&apos;
+&#x7B49;&#x4EF7;&#x4E8E;
+&gt;&gt;&gt; (lambda s:&apos; &apos;.join(s.split()))(&quot;this is\na\ttest&quot;)
+</code></pre><h3 id="&#x5E26;&#x53C2;&#x6570;&#x533F;&#x540D;&#x51FD;&#x6570;">&#x5E26;&#x53C2;&#x6570;&#x533F;&#x540D;&#x51FD;&#x6570;</h3>
+<pre><code>&gt;&gt;&gt; lambda x: x**3 #&#x4E00;&#x4E2A;&#x53C2;&#x6570;
+&gt;&gt;&gt; lambda x,y,z:x+y+z #&#x591A;&#x4E2A;&#x53C2;&#x6570;
+
+&gt;&gt;&gt; lambda x,y=3: x*y #&#x5141;&#x8BB8;&#x53C2;&#x6570;&#x5B58;&#x5728;&#x9ED8;&#x8BA4;&#x503C;
+</code></pre><h3 id="&#x533F;&#x540D;&#x51FD;&#x6570;&#x8C03;&#x7528;1">&#x533F;&#x540D;&#x51FD;&#x6570;&#x8C03;&#x7528;1</h3>
+<pre><code>#&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;,&#x7136;&#x540E;&#x518D;&#x50CF;&#x4E00;&#x822C;&#x51FD;&#x6570;&#x8C03;&#x7528;
+
+&gt;&gt;&gt; c = lambda x,y,z: x*y*z
+&gt;&gt;&gt; c(2,3,4)
+24
+
+
+&gt;&gt;&gt; c = lambda x,y=2: x+y #&#x4F7F;&#x7528;&#x4E86;&#x9ED8;&#x8BA4;&#x503C;
+&gt;&gt;&gt; c(10) #&#x4E0D;&#x8F93;&#x7684;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;2
+12
+
+
+&gt;&gt;&gt; a = lambda *z:z #*z&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7956;
+&gt;&gt;&gt; a(&apos;Testing1&apos;,&apos;Testing2&apos;)
+(&apos;Testing1&apos;, &apos;Testing2&apos;)
+
+
+&gt;&gt;&gt; c = lambda **Arg: Arg #arg&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;
+&gt;&gt;&gt; c()
+{}
+</code></pre><h3 id="&#x533F;&#x540D;&#x51FD;&#x6570;&#x8C03;&#x7528;2">&#x533F;&#x540D;&#x51FD;&#x6570;&#x8C03;&#x7528;2</h3>
+<pre><code>&gt;&gt;&gt; (lambda x,y: x if x&gt; y else y)(101,102)
+102 
+
+
+&gt;&gt;&gt; (lambda x:x**2)(3)
+9
+
+#lambda&#x8FD4;&#x56DE;&#x7684;&#x503C;&#xFF0C;&#x7ED3;&#x5408;map,filter,reduce&#x4F7F;&#x7528;
+
+&gt;&gt;&gt; filter(lambda x:x%3==0,[1,2,3,4,5,6])
+[3, 6]
+
+&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x5F0F;
+
+&gt;&gt;&gt; l = [x for x in [1,2,3,4,5,6] if x%3==0]
+&gt;&gt;&gt; l
+[3, 6]
+</code></pre><h3 id="&#x533F;&#x540D;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x4F7F;&#x7528;">&#x533F;&#x540D;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x4F7F;&#x7528;</h3>
+<pre><code>#lambda&#x5D4C;&#x5957;&#x5230;&#x666E;&#x901A;&#x51FD;&#x6570;&#x4E2D;,lambda&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x505A;&#x4E3A;return&#x7684;&#x503C;
+
+&gt;&gt;&gt; def increment(n):
+... return lambda x: x+n
+...
+&gt;&gt;&gt; f=increment(4)
+&gt;&gt;&gt; f(2)
+6
+
+&gt;&gt;&gt; def say():
+... title = &apos;Sir,&apos;
+... action= lambda x: title + x
+... return action
+...
+&gt;&gt;&gt; act = say()
+&gt;&gt;&gt; act(&apos;Smith!&apos;)
+&apos;Sir,Smith!&apos;
+</code></pre><h3 id="&#x4F5C;&#x4E1A;&#xFF1A;">&#x4F5C;&#x4E1A;&#xFF1A;</h3>
+<blockquote>
+<h6 id="&#x4F8B;01-&#x5B57;&#x7B26;&#x4E32;&#x8054;&#x5408;&#xFF0C;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;xlambda&#x8FD9;&#x79CD;&#x683C;&#x5F0F;">&#x4F8B;01: &#x5B57;&#x7B26;&#x4E32;&#x8054;&#x5408;&#xFF0C;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;x=(lambda...)&#x8FD9;&#x79CD;&#x683C;&#x5F0F;</h6>
+</blockquote>
+<pre><code>&gt;&gt;&gt; x = (lambda x=&quot;Boo&quot;,y=&quot;Too&quot;,z=&quot;Zoo&quot;: x+y+z)
+&gt;&gt;&gt; x(&quot;Foo&quot;)
+&apos;FooTooZoo&apos;
+</code></pre><blockquote>
+<h6 id="&#x4F8B;02-&#x548C;&#x5217;&#x8868;&#x8054;&#x5408;&#x4F7F;&#x7528;">&#x4F8B;02: &#x548C;&#x5217;&#x8868;&#x8054;&#x5408;&#x4F7F;&#x7528;</h6>
+</blockquote>
+<pre><code>&gt;&gt;&gt; L = [lambda x:x**2,\
+lambda x:x**3,\
+lambda x:x**4]
+
+&gt;&gt;&gt; for f in L:
+... print f(2)
+...
+4
+8
+16
+
+&#x4E5F;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x8C03;&#x7528;
+
+&gt;&gt;&gt; print L[0](3)
+9
+</code></pre><blockquote>
+<h6 id="&#x4F8B;03-&#x548C;&#x5B57;&#x5178;&#x7ED3;&#x5408;&#x4F7F;&#x7528;">&#x4F8B;03: &#x548C;&#x5B57;&#x5178;&#x7ED3;&#x5408;&#x4F7F;&#x7528;</h6>
+</blockquote>
+<pre><code>&gt;&gt;&gt; key = &apos;B&apos;
+&gt;&gt;&gt; dic = { &apos;A&apos;: lambda: 2*2,\
+... &apos;B&apos;: lambda: 2*4,\
+... &apos;C&apos;: lambda: 2*8}
+&gt;&gt;&gt; dic[key]()
+8
+</code></pre><blockquote>
+<h6 id="&#x4F8B;04-&#x6C42;&#x6700;&#x5C0F;&#x503C;">&#x4F8B;04: &#x6C42;&#x6700;&#x5C0F;&#x503C;</h6>
+</blockquote>
+<pre><code>&gt;&gt;&gt; lower = lambda x,y: x if x&lt;y else y
+&gt;&gt;&gt; lower(&apos;aa&apos;,&apos;ab&apos;)
+&apos;aa&apos;
+</code></pre><blockquote>
+<h6 id="&#x4F8B;05-&#x548C;map&#x53CA;list&#x8054;&#x5408;&#x4F7F;&#x7528;">&#x4F8B;05: &#x548C;map&#x53CA;list&#x8054;&#x5408;&#x4F7F;&#x7528;</h6>
+</blockquote>
+<pre><code>&gt;&gt;&gt; import sys
+&gt;&gt;&gt; showall = lambda x:list(map(sys.stdout.write,x))
+&gt;&gt;&gt; showall([&apos;Jerry\n&apos;,&apos;Sherry\n&apos;,&apos;Alice\n&apos;])
+Jerry
+Sherry
+Alice
+
+&gt;&gt;&gt; showall([&apos;Jerry&apos;,&apos;Sherry&apos;,&apos;Alice&apos;])
+JerrySherryAlice
+
+&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;
+
+&gt;&gt;&gt; showall = lambda x: [sys.stdout.write(line) for line in x]
+&gt;&gt;&gt; showall((&apos;I\t&apos;,&apos;Love\t&apos;,&apos;You!&apos;))
+I Love You![None, None, None]
+</code></pre><h4 id="&#x5176;&#x4ED6;&#x6848;&#x4F8B;">&#x5176;&#x4ED6;&#x6848;&#x4F8B;</h4>
+<pre><code>&#x4F8B;06: &#x5728;Tkinter&#x4E2D;&#x5B9A;&#x4E49;&#x5185;&#x8054;&#x7684;callback&#x51FD;&#x6570;
+
+import sys
+from Tkinter import Button,mainloop
+
+
+x = Button(text=&apos;Press me&apos;,
+command=(lambda:sys.stdout.write(&apos;Hello,World\n&apos;)))
+x.pack()
+x.mainloop()
+
+
+
+&gt;&gt;&gt; 
+
+Hello,World!
+
+Hello,World!
+
+
+
+&#x4F8B;07: lambda&#x548C;map&#x8054;&#x5408;&#x4F7F;&#x7528;,
+
+&gt;&gt;&gt;  out = lambda *x: sys.stdout.write(&apos; &apos;.join(map(str,x)))
+&gt;&gt;&gt; out(&apos;This&apos;,&apos;is&apos;,&apos;a&apos;,&apos;book!\n&apos;)
+This is a book!
+
+
+
+&#x4F8B;08: &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;&#x67D0;&#x4E2A;&#x5B57;&#x6BCD;&#x5F00;&#x5934;
+
+&gt;&gt;&gt; print (lambda x: x.startswith(&apos;B&apos;))(&apos;Bob&apos;)
+True
+
+-----
+
+&gt;&gt;&gt; Names = [&apos;Anne&apos;, &apos;Amy&apos;, &apos;Bob&apos;, &apos;David&apos;, &apos;Carrie&apos;, &apos;Barbara&apos;, &apos;Zach&apos;]
+&gt;&gt;&gt; B_Name= filter(lambda x: x.startswith(&apos;B&apos;),Names)
+&gt;&gt;&gt; B_Name
+[&apos;Bob&apos;, &apos;Barbara&apos;]
+
+
+
+&#x4F8B;09: lambda&#x548C;map&#x8054;&#x5408;&#x4F7F;&#x7528;:
+
+&gt;&gt;&gt;  squares = map(lambda x:x**2,range(5))
+&gt;&gt;&gt; squares
+[0, 1, 4, 9, 16]
+
+
+
+&#x4F8B;10. lambda&#x548C;map,filter&#x8054;&#x5408;&#x4F7F;&#x7528;:
+
+&gt;&gt;&gt;  squares = map(lambda x:x**2,range(10))
+&gt;&gt;&gt; filters = filter(lambda x:x&gt;5 and x&lt;50,squares)
+&gt;&gt;&gt; filters
+[9, 16, 25, 36, 49]
+
+
+
+&#x4F8B;11. lambda&#x548C;sorted&#x8054;&#x5408;&#x4F7F;&#x7528;
+
+#&#x6309;death&#x540D;&#x5355;&#x91CC;&#x9762;&#xFF0C;&#x6309;&#x5E74;&#x9F84;&#x6765;&#x6392;&#x5E8F;
+
+#&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x503C;&#x8FD4;&#x56DE;&#x7ED9;key&#xFF0C;&#x8FDB;&#x6765;&#x6392;&#x5E8F;
+
+&gt;&gt;&gt; death = [ (&apos;James&apos;,32),
+(&apos;Alies&apos;,20),
+(&apos;Wendy&apos;,25)]
+
+&gt;&gt;&gt; sorted(death,key=lambda age:age[1]) #&#x6309;&#x7167;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7D22;&#x5F15;&#x4E3A;1&#x6392;&#x5E8F;
+[(&apos;Alies&apos;, 20), (&apos;Wendy&apos;, 25), (&apos;James&apos;, 32)]
+
+
+
+&#x4F8B;12. lambda&#x548C;reduce&#x8054;&#x5408;&#x4F7F;&#x7528;
+
+&gt;&gt;&gt; L = [1,2,3,4]
+&gt;&gt;&gt; sum = reduce(lambda x,y:x+y,L)
+&gt;&gt;&gt; sum
+10
+
+
+
+&#x4F8B;13. &#x6C42;2-50&#x4E4B;&#x95F4;&#x7684;&#x7D20;&#x6570;
+
+#&#x7D20;&#x6570;:&#x53EA;&#x80FD;&#x88AB;1&#x6216;&#x88AB;&#x81EA;&#x5DF1;&#x6574;&#x9664;&#x7684;&#x6570;
+
+&gt;&gt;&gt; nums = range(2,50)
+&gt;&gt;&gt; for i in nums:
+nums = filter(lambda x:x==i or x % i,nums)
+&gt;&gt;&gt; nums
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+
+
+
+&#x4F8B;14. &#x6C42;&#x4E24;&#x4E2A;&#x5217;&#x8868;&#x5143;&#x7D20;&#x7684;&#x548C;
+
+&gt;&gt;&gt; a = [1,2,3,4]
+&gt;&gt;&gt; b = [5,6,7,8]
+&gt;&gt;&gt; map(lambda x,y:x+y, a,b)
+[6, 8, 10, 12]
+
+
+
+&#x4F8B;15. &#x6C42;&#x5B57;&#x7B26;&#x4E32;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x957F;&#x5EA6; 
+
+&gt;&gt;&gt; sentence = &quot;Welcome To Beijing!&quot;
+&gt;&gt;&gt; words = sentence.split()
+
+&gt;&gt;&gt; lengths = map(lambda x:len(x),words)
+&gt;&gt;&gt; lengths
+[7, 2, 8]
+
+&#x5199;&#x6210;&#x4E00;&#x884C;:
+
+&gt;&gt;&gt;  print map(lambda x:len(x),&apos;Welcome To Beijing!&apos;.split())
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter1/python4e2d-args-548c-kargs-de-yong-fa-zong-jie.html" class="navigation navigation-prev " aria-label="Previous page: python中\*args和\*\*kargs得用法总结"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter1/fei-bo-na-qi.html" class="navigation navigation-next " aria-label="Next page: 斐波那契"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
