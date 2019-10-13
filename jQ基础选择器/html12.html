@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>html12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+ 
+ 
+<h2>jQuery选择器</h2>
+<h3>基本选择器</h3>
+<ol>
+<li>
+标签名选择器
+$(&quot;div&quot;)  匹配文档中所有div
+</li>
+<li>
+id选择器
+$(&quot;#id&quot;) 
+</li>
+<li>
+类选择器
+$(&quot;.类名&quot;)
+</li>
+<li>
+分组选择器
+$(&quot;div,#id,.class&quot;)
+</li>
+<li>
+所有元素选择器
+$(&quot;*&quot;)
+</li>
+</ol>
+<h3>层级选择器</h3>
+<ol>
+<li>$(&quot;div span&quot;) 匹配div下所有的span元素</li>
+<li>$(&quot;div&gt;span&quot;) 匹配div下所有span的子元素</li>
+<li>$(&quot;div+span&quot;) 匹配div后面紧邻的span兄弟元素</li>
+<li>$(&quot;div~span&quot;) 匹配div后面所有的span兄弟元素</li>
+</ol>
+<h3>层级函数</h3>
+<ol>
+<li>
+获取元素的所有兄弟元素
+			$(&quot;#two&quot;).siblings(&quot;div&quot;)
+</li>
+<li>
+获取元素的哥哥元素
+			$(&quot;#two&quot;).prev(&quot;div&quot;)
+</li>
+<li>
+获取元素的哥哥们元素
+			$(&quot;#two&quot;).prevAll(&quot;div&quot;)
+</li>
+<li>
+获取元素的弟弟元素
+			$(&quot;#two&quot;).next(&quot;div&quot;)
+</li>
+<li>
+获取元素的弟弟们元素
+			$(&quot;#two&quot;).nextAll(&quot;div&quot;)
+</li>
+</ol>
+<h3>过滤选择器</h3>
+<ol>
+<li>$(&quot;div:first&quot;) 匹配所有div中的第一个元素</li>
+<li>$(&quot;div:last&quot;) 匹配所有div中的最后一个元素</li>
+<li>$(&quot;div:even&quot;) 匹配所有div中偶数div 从0开始</li>
+<li>$(&quot;div:odd&quot;) 匹配所有div中奇数div 从0开始</li>
+<li>$(&quot;div:eq(n)&quot;)匹配所有div中下标为n元素从0开始</li>
+<li>$(&quot;div:lt(n)&quot;)匹配所有div中下标小于n元素0开始</li>
+<li>$(&quot;div:gt(n)&quot;)匹配所有div中下标大于n元素0开始</li>
+<li>$(&quot;div:not(.one)&quot;)匹配所有div中 class不为one的元素</li>
+</ol>
+<h3>内容选择器</h3>
+<ol>
+<li>$(&quot;div:has(p)&quot;) 匹配所有包含p标签的div</li>
+<li>$(&quot;div:empty&quot;) 匹配所有空的div</li>
+<li>$(&quot;div:parent&quot;) 匹配所有 非空的div</li>
+<li>$(&quot;div:contains('id')&quot;) 匹配文本内容包含id的div</li>
+</ol>
+<h3>可见选择器</h3>
+<ol>
+<li>$(&quot;div:hidden&quot;) 匹配所有隐藏的div元素</li>
+<li>$(&quot;div:visible&quot;) 匹配所有可见的div元素 </li>
+</ol>
+<h3>jq中显示相关的函数</h3>
+<pre><code>        //让隐藏的元素显示
+        //$(&quot;div:hidden&quot;).show();
+        //让显示的元素隐藏
+        //$(&quot;div:visible&quot;).hide();
+        //切换元素的显示状态
+        //$(&quot;div&quot;).toggle();
+</code></pre>
+
+<h3>属性选择器</h3>
+<ol>
+<li>$(&quot;div[id]&quot;) 匹配有id属性的div元素</li>
+<li>$(&quot;div[id='d1']&quot;)匹配id属性等于d1的div</li>
+<li>$(&quot;div[id!='d1']&quot;)匹配id属性不等于d1的div</li>
+</ol>
+<h3>子元素选择器</h3>
+<ol>
+<li>$(&quot;div:nth-child(n)&quot;) n从1开始，匹配div中第n个子元素</li>
+<li>$(&quot;div:first-child&quot;) 匹配div中第1个子元素</li>
+<li>$(&quot;div:last-child&quot;) 匹配div中最后一个子元素</li>
+</ol>
+<h3>表单选择器</h3>
+<ol>
+<li>$(&quot;:input&quot;) 匹配所有的 input中 文本框 密码框 单选，复选框 下拉选 文本域(textarea) button</li>
+<li>$(&quot;:password&quot;) 匹配所有密码框</li>
+<li>$(&quot;:radio&quot;) 匹配所有单选</li>
+<li>$(&quot;:checkbox&quot;)匹配所有复选框</li>
+<li>$(&quot;:checked&quot;)匹配所有被选中的 单选/复选/下拉选option</li>
+<li>$(&quot;input:checked&quot;)匹配所有被选中的单选和复选</li>
+<li>$(&quot;:selected&quot;)匹配所有被选中的下拉选option</li>
+</ol>
+<h2>文档操作</h2>
+<ol>
+<li>
+创建元素
+var $d = $(&quot;<div>abc</div>&quot;);
+</li>
+<li>添加元素</li>
+<li>$(&quot;#big&quot;).append($d); //最后面</li>
+<li>$(&quot;#big&quot;).prepend($d)；//最前面</li>
+<li>插入元素</li>
+<li>兄弟元素.after($d);//插入到兄弟元素的后面</li>
+<li>兄弟元素.before($d);//插入到兄弟元素的前面</li>
+<li>删除元素</li>
+<li>通过自己删除 $(&quot;#id&quot;).remove();</li>
+<li>
+先得到所有的li 然后删除里面id为sh的
+	 $(&quot;li&quot;).remove(&quot;#sh&quot;);
+</li>
+<li>
+<p>修改样式</p>
+<pre><code>$(&quot;#id&quot;).css(&quot;width&quot;,&quot;40px&quot;)//设置宽度
+$(&quot;#id&quot;).css(&quot;width&quot;)//获取宽度
+</code></pre>
+
+</li>
+<li>
+<p>属性</p>
+<pre><code>$(&quot;#id&quot;).attr(&quot;id&quot;,&quot;xx&quot;)//设置id属性
+$(&quot;#id&quot;).attr(&quot;id&quot;) //获取id
+</code></pre>
+
+</li>
+<li>
+<p>文本</p>
+<pre><code>$(&quot;#id&quot;).text(&quot;xxx&quot;)//设置元素文本
+$(&quot;#id&quot;).text()//获取文本
+</code></pre>
+
+</li>
+<li>
+<p>html</p>
+<pre><code>$(&quot;#id&quot;).html(&quot;xxx&quot;)//设置元素html代码
+$(&quot;#id&quot;).html()//获取html代码
+</code></pre>
+
+</li>
+</ol>
+<h1>选择器</h1>
+<h3>基本</h3>
+<ol>
+<li>标签名</li>
+<li>id</li>
+<li>类</li>
+<li>分组</li>
+<li>*</li>
+</ol>
+<h3>层级</h3>
+<ol>
+<li>div span</li>
+<li>div&gt;span</li>
+<li>div+span</li>
+<li>div~span</li>
+</ol>
+<h3>层级函数</h3>
+<p>siblings 所有兄弟
+next 弟弟  nextAll所有弟弟 prev哥哥 prevAll哥哥们</p>
+<h3>过滤</h3>
+<ol>
+<li>div:first</li>
+<li>last</li>
+<li>even</li>
+<li>odd</li>
+<li>eq()</li>
+<li>not()</li>
+<li>lt()</li>
+<li>gt()</li>
+</ol>
+<h3>内容</h3>
+<ol>
+<li>div:has(p)</li>
+<li>div:empty</li>
+<li>div:parent</li>
+<li>div:contains('a')</li>
+</ol>
+<h3>可见</h3>
+<ol>
+<li>div:hidden</li>
+<li>div:visible
+show()  hide() toggle()</li>
+</ol>
+<h3>属性</h3>
+<ol>
+<li>div[id]</li>
+<li>div[id='xx'];</li>
+<li>div[id!='xx'];</li>
+</ol>
+<h3>子元素</h3>
+<ol>
+<li>div:nth-child(n) 1开始</li>
+<li>div:first-child</li>
+<li>div:last-child</li>
+</ol>
+<h3>表单选择器</h3>
+<ol>
+<li>:input</li>
+<li>:password</li>
+<li>:radio</li>
+<li>:checkbox</li>
+<li>:checked 单选、多选、下拉选</li>
+<li>input:checked 单选、多选</li>
+<li>:selected 下拉选</li>
+</ol>
+<h3>文档操作：</h3>
+<ol>
+<li>创建  var $d = $(&quot;<div></div>&quot;);</li>
+<li>添加  上级.append  上级.prepend()</li>
+<li>插入 兄弟.after()  兄弟.before()</li>
+<li>删除  元素.remove()  $(&quot;li&quot;).remove(&quot;#id&quot;);</li>
+<li>样式 元素.css(&quot;width&quot;,&quot;20px&quot;)</li>
+<li>属性 元素.attr(&quot;id&quot;,&quot;xx&quot;)</li>
+<li>文本 元素.text()</li>
+<li>html 元素.html()</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
